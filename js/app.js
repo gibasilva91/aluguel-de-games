@@ -1,3 +1,5 @@
+let contador = 0;
+
 function alterarStatus(id) {
     let gameCLicado = document.getElementById(`game-${id}`);
     let imagem = gameCLicado.querySelector('.dashboard__item__img');
@@ -14,6 +16,12 @@ function alterarStatus(id) {
             imagem.classList.add('dashboard__item__img--rented');
             botao.classList.add('dashboard__item__button--return');
             botao.textContent = 'Devolver';
+            quantAlugueis();
         }
     }
+}
+
+function quantAlugueis() {
+    contador++;
+    console.log(contador);
 }
